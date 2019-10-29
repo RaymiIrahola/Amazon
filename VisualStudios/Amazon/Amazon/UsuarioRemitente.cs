@@ -12,5 +12,6 @@ namespace Amazon
 {
     public class UsuarioRemitente : Usuario
     {
+        
     }
 }
