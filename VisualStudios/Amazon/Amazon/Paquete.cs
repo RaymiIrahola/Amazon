@@ -4,7 +4,12 @@ using System.Text;
 
 namespace Amazon
 {
-    class Paquete
+    public class Paquete: Envio
     {
+        public int idPaquete { get; set; }
+
+        public int numPaquete { get; set; }
+
+        public float peso { get; set; }
     }
 }
