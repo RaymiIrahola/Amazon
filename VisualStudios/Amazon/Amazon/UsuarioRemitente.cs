@@ -12,6 +12,11 @@ namespace Amazon
 {
     public class UsuarioRemitente : Usuario
     {
-        
+        public List<Envio> ListadeEnvios { get; set; }
+        public void enviar (Envio envio)
+        {
+            ListadeEnvios.Add(envio);
+        }
+
     }
 }

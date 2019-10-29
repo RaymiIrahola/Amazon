@@ -1,10 +1,19 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 
 namespace Amazon
 {
-    class UsuarioDestinatario : Usuario
+    public class UsuarioDestinatario : Usuario
     {
+        public List<Envio> ListadePaquetes { get; set; }
+
+        public void recibir (Envio envio)
+        {
+            ListadePaquetes.Add(envio);
+            
+        }
     }
 }

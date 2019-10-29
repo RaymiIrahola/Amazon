@@ -14,5 +14,8 @@ namespace Amazon
         public int numCliente { get; set; }
         public int numTarjeta { get; set; }
         public int telefono { get; set; }
+        
+
+
     }
 }

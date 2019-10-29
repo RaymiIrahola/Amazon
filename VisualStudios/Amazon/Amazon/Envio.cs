@@ -29,9 +29,18 @@ namespace Amazon
 
         }
 
-        public DateTime CalcularFechaLlegada(DateTime fechaEnvio)
+        public Envio(UsuarioDestinatario usuarioDestinatario, UsuarioRemitente usuarioRemitente, TipodeEnvio tipodeEnvioa)
         {
-
+            remitente = usuarioRemitente;
+            destinatario = usuarioDestinatario;
+            tipoEnvio = tipodeEnvioa;
+            fechaEnvio = DateTime.Now;
+            fechaLlegada = tipoEnvio.calcularfechadellegada;
+            direccionDeDestino = direccionDeDestino;
+            numEnvio = numEnvio;
         }
+
+
+
     }
 }
