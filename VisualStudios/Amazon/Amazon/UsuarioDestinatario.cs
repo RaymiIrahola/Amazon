@@ -13,7 +13,6 @@ namespace Amazon
         public void recibir (Envio envio)
         {
             ListadePaquetes.Add(envio);
-            
         }
     }
 }
