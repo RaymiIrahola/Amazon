@@ -13,6 +13,12 @@ namespace Amazon
         public int numTipodeEnvio { get; set; }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+       
+>>>>>>> 6cead1d21f0340dd2d07fbc2a3ed8f77929ffd4b
 =======
 
 
