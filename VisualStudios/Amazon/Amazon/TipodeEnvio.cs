@@ -14,7 +14,7 @@ namespace Amazon
 
         public DateTime calcularfechadellegada(Envio envio)
         {
-            TimeSpan fehca = duracionDeEnvio(dtpDesde.Value);
+            TimeSpan fecha = duracionDeEnvio(dtpDesde.Value);
         }
     }
 }

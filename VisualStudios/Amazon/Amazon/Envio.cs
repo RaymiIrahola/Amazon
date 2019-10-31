@@ -24,16 +24,17 @@ namespace Amazon
 
         public TipodeEnvio tipoEnvio { get; set; }
 
-        public float CalcularEnvioDePeso(Paquete paquete)
+        public float CalcularCostoDeEnvio(Paquete paquete)
         {
-
+            
         }
+        
 
-        public Envio(UsuarioDestinatario usuarioDestinatario, UsuarioRemitente usuarioRemitente, TipodeEnvio tipodeEnvioa)
+        public Envio(UsuarioDestinatario usuarioDestinatario, UsuarioRemitente usuarioRemitente, TipodeEnvio tipodeEnvio)
         {
             remitente = usuarioRemitente;
             destinatario = usuarioDestinatario;
-            tipoEnvio = tipodeEnvioa;
+            tipoEnvio = tipodeEnvio;
             fechaEnvio = DateTime.Now;
             fechaLlegada = tipoEnvio.calcularfechadellegada;
             direccionDeDestino = direccionDeDestino;
