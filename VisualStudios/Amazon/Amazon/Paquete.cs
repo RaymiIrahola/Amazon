@@ -4,11 +4,9 @@ using System.Text;
 
 namespace Amazon
 {
-    public class Paquete: Envio
+    public class Paquete
     {
-        public Paquete(UsuarioDestinatario usuarioDestinatario, UsuarioRemitente usuarioRemitente, TipodeEnvio tipodeEnvioa) : base(usuarioDestinatario, usuarioRemitente, tipodeEnvioa)
-        {
-        }
+        
 
         public int idPaquete { get; set; }
 

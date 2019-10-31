@@ -18,7 +18,7 @@ namespace Amazon
 
         public int numEnvio { get; set; }
 
-        public Paquete paquete { get; set; }
+        public Paquete paquetes { get; set; }
 
         public UsuarioRemitente remitente { get; set; }
 
@@ -52,21 +52,20 @@ namespace Amazon
             return tipoEnvio.costoDeEnvio + costoExtra;
         }
 
-        public void ArmarEnvio (Paquete paquete, TipodeEnvio tipodeEnvio, UsuarioDestinatario usuarioDestinatario, UsuarioRemitente usuarioRemitente)
-        {
-
-        }
+       
         
-        public Envio(UsuarioDestinatario usuarioDestinatario, UsuarioRemitente usuarioRemitente, TipodeEnvio tipodeEnvio)
+        public void Enviar (UsuarioDestinatario usuarioDestinatario, UsuarioRemitente usuarioRemitente, TipodeEnvio tipodeEnvio , Paquete paquete)
         {
-            //remitente = usuarioRemitente;
-            //destinatario = usuarioDestinatario;
-            //tipoEnvio = tipodeEnvio;
-            //fechaEnvio = DateTime.Now;
-            //fechaLlegada = tipoEnvio.calcularfechadellegada(;
-            //direccionDeDestino = direccionDeDestino;
-            //numEnvio = numEnvio;
+            this.remitente = usuarioRemitente;
+            this.destinatario = usuarioDestinatario;
+            this.tipoEnvio = tipodeEnvio;
+            this.fechaEnvio = DateTime.Now;
+            this.fechaLlegada = fechaEnvio.AddDays(tipodeEnvio.duracionDeEnvio);
+            this.direccionDeDestino = direccionDeDestino;
+            this.numEnvio = numEnvio;
+            this.paquetes = paquete;
         }
+       
 
 
 
