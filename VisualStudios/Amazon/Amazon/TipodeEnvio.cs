@@ -8,13 +8,15 @@ namespace Amazon
     {
         public string codigo { get; set; }
         public int costoDeEnvio { get; set; }
-        public DateTime duracionDeEnvio { get; set; }
+        public byte duracionDeEnvio { get; set; }
         public int idTipodeEnvio { get; set; }
         public int numTipodeEnvio { get; set; }
 
-        public DateTime calcularfechadellegada(Envio envio)
-        {
-            TimeSpan fecha = duracionDeEnvio(dtpDesde.Value);
-        }
+<<<<<<< HEAD
+=======
+
+
+       
+>>>>>>> 6cead1d21f0340dd2d07fbc2a3ed8f77929ffd4b
     }
 }
