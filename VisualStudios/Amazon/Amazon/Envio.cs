@@ -38,7 +38,16 @@ namespace Amazon
             this.paquetes = paquete;
             usuarioDestinatario.recibir(this);
         }
-       
+        public float CalcularCostoDeEnvioExpress(Paquete paquete, TipodeEnvio tipodeEnvio)
+        {
+            float costext = 0;
+            if (paquete.peso > 2)
+            {
+                costext = Math.Abs(2 - paquete.peso) * tipodeEnvio.costoExtra / 1;
+            }
+            return tipoEnvio.costoDeEnvio + costext;
+        }
+
 
 
 

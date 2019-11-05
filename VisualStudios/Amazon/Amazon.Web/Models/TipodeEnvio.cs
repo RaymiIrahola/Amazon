@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace Amazon
+namespace Amazon.Web.Models
 {
     public class TipodeEnvio
     {
@@ -12,6 +13,5 @@ namespace Amazon
         public int idTipodeEnvio { get; set; }
         public int numTipodeEnvio { get; set; }
         public byte costoExtra { get; set; }
-
     }
 }
