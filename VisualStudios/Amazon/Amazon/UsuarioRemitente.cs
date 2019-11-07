@@ -14,10 +14,10 @@ namespace Amazon
     {
         public List<Envio> ListadeEnvios { get; set; }
 
-        public void Realizarenvio(Envio envio, UsuarioDestinatario usuarioDestinatario  ,Paquete paquete , TipodeEnvio tipodeEnvio)
+        public void Realizarenvio(Envio envio, UsuarioDestinatario usuarioDestinatario , Paquete paquete)
         {
             ListadeEnvios.Add(envio);
-            envio.Enviar(usuarioDestinatario, this, tipodeEnvio, paquete);
+            envio.Enviar(usuarioDestinatario, this, paquete);
         }
 
     }
