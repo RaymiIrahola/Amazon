@@ -16,7 +16,6 @@
 
 
   <ItemGroup>
-    <Folder Include="Views\Envio\" />
     <Folder Include="Views\NewFolder\" />
     <Folder Include="Views\TipodeEnvio\" />
     <Folder Include="Views\Paquete\" />

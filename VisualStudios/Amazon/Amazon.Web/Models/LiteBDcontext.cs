@@ -4,10 +4,10 @@ using Microsoft.Extensions.Options;
 
 namespace Amazon.Web.Models
 {
-    public class LiteBDcontex
+    public class LiteBDcontext
     {
         public readonly LiteDatabase Context;
-        public LiteBDcontex (IOptions<LiteBDconfig> configs)
+        public LiteBDcontext (IOptions<LiteBDconfig> configs)
         {
             try
             {

@@ -18,25 +18,7 @@ namespace Amazon.Web.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            /* 
-                obtengo la lista de empleados con id "nomina" de la base de datos, 
-                ojo que el método GetCollection retorna una coleccion del tipo "LiteCollection" no "IEnumerable"
-            */
-            var envios = db.Context.GetCollection<Envio>("nomina");
-
-            /*
-                Guardo en el ViewBag la cantidad de empleados que se encuentra en la lista
-                El ViewBag es una memoria compartida entre el Controller y la View, para guardar y acceder se
-                debe realizar mediante un identificador, la forma de uso es ViewBag."Identificador" se puede almacenar
-                cualquier objeto
-             */
-            ViewBag.CantidaDeenvios = envios.Count();
-
-            /*
-                Retorna la vista con nombre "Index" con el contenido de la lista empleados con
-                tipo de dato IEnumerable
-             */
-            return View("Index", envios.FindAll());
+            return View("Index");
         }
 
 
