@@ -10,8 +10,8 @@ namespace Amazon.Web.Controllers
 {
     public class EnvioController : Controller
     {
-        private readonly LiteBDcontex db;
-        public EnvioController (LiteBDcontex db)
+        private readonly LiteBDcontext db;
+        public EnvioController (LiteBDcontext db)
         {
             this.db = db;
         }
