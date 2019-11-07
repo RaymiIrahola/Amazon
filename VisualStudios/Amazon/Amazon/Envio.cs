@@ -22,34 +22,48 @@ namespace Amazon
 
         public UsuarioRemitente remitente { get; set; }
 
-        public TipodeEnvio tipoEnvio { get; set; }
+      
 
 
        
-        public void Enviar (UsuarioDestinatario usuarioDestinatario, UsuarioRemitente usuarioRemitente, TipodeEnvio tipodeEnvio , Paquete paquete)
+        public void Enviar (UsuarioDestinatario usuarioDestinatario, UsuarioRemitente usuarioRemitente, Paquete paquete)
         {
             this.remitente = usuarioRemitente;
             this.destinatario = usuarioDestinatario;
-            this.tipoEnvio = tipodeEnvio;
             this.fechaEnvio = DateTime.Now;
-            this.fechaLlegada = fechaEnvio.AddDays(tipodeEnvio.duracionDeEnvio);
             this.direccionDeDestino = direccionDeDestino;
             this.numEnvio = numEnvio;
             this.paquetes = paquete;
             usuarioDestinatario.recibir(this);
         }
-        public float CalcularCostoDeEnvioExpress(Paquete paquete, TipodeEnvio tipodeEnvio)
+        public float CalcularCostoDeEnvioExpress(Paquete paquete)
         {
             float costext = 0;
             if (paquete.peso > 2)
             {
-                costext = Math.Abs(2 - paquete.peso) * tipodeEnvio.costoExtra / 1;
+                costext = Math.Abs(2 - paquete.peso) * 20 / 1;
             }
-            return tipoEnvio.costoDeEnvio + costext;
+            return costext;
         }
 
+        public float CalcularCostoDeEnvioRapido(Paquete paquete)
+        {
+            float costext = 0;
+            if (paquete.peso > 2)
+            {
+                costext = Math.Abs(2 - paquete.peso) * 50 / 1;
+            }
+            return  costext;
+        }
 
-
-
+        public float CalcularCostoDeEnvioEstandar(Paquete paquete)
+        {
+            float costext = 0;
+            if (paquete.peso > 2)
+            {
+                costext = Math.Abs(2 - paquete.peso) * 15 / 1;
+            }
+            return costext;
+        }
     }
 }
