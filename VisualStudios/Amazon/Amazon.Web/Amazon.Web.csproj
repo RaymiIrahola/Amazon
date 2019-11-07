@@ -6,19 +6,27 @@
     <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Views\NewFolder\**" />
+    <Compile Remove="Views\Paquete\**" />
+    <Compile Remove="Views\TipodeEnvio\**" />
+    <Content Remove="Views\NewFolder\**" />
+    <Content Remove="Views\Paquete\**" />
+    <Content Remove="Views\TipodeEnvio\**" />
+    <EmbeddedResource Remove="Views\NewFolder\**" />
+    <EmbeddedResource Remove="Views\Paquete\**" />
+    <EmbeddedResource Remove="Views\TipodeEnvio\**" />
+    <None Remove="Views\NewFolder\**" />
+    <None Remove="Views\Paquete\**" />
+    <None Remove="Views\TipodeEnvio\**" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="LiteDB" Version="4.1.4" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
-  </ItemGroup>
-
-
-  <ItemGroup>
-    <Folder Include="Views\NewFolder\" />
-    <Folder Include="Views\TipodeEnvio\" />
-    <Folder Include="Views\Paquete\" />
   </ItemGroup>
 
 
