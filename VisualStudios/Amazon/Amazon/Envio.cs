@@ -14,7 +14,7 @@ namespace Amazon
 
         public DateTime fechaLlegada { get; set; }
 
-        public int idEnvio { get; set; }
+        public int id { get; set; }
 
         public int numEnvio { get; set; }
 

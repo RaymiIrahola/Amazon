@@ -7,7 +7,7 @@ namespace Amazon.Web.Models
 {
     public class Paquete
     {
-        public int idPaquete { get; set; }
+        public int id { get; set; }
 
         public int numPaquete { get; set; }
 

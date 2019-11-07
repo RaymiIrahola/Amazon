@@ -59,7 +59,7 @@ namespace Amazon.Web.Controllers
                en la base de datos, en este caso como se tiene el objeto, pero si el Id y como este es unico
                procedo a borrar todos los objetos que posean el mismo Id.
             */
-            envios.Delete(x => x.idEnvio == id);
+            envios.Delete(x => x.id == id);
 
             return RedirectToAction("Index", envios.FindAll());
         }
