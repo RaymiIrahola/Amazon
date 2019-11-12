@@ -20,6 +20,7 @@ namespace Amazon.Web.Models
         public Paquete paquetes { get; set; }
 
         public UsuarioRemitente remitente { get; set; }
+         public TipodeEnvio tipodeEnvio { get; set; }
 
         
     }
