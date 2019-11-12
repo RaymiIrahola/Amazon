@@ -25,6 +25,8 @@ namespace Amazon
 
         public TipodeEnvio TipodeEnvio { get; set; }
 
+        public double costodelenvio { get; set; }
+
       
 
 
@@ -39,36 +41,18 @@ namespace Amazon
             this.numEnvio = numEnvio;
             this.paquetes = paquete;
             this.TipodeEnvio = TipodeEnvio;
+            this.costodelenvio = costodelenvio;
             
         }
-        public float CalcularCostoDeEnvioExpress(Paquete paquete)
+        public double CalcularCostoDeEnvio(Paquete paquete , TipodeEnvio tipodeEnvio)
         {
-            float costext = 0;
+            double costext = 0;
             if (paquete.peso > 2)
             {
-                costext = Math.Abs(2 - paquete.peso) * 20 / 1;
+                costext = Math.Abs(2 - paquete.peso) * tipodeEnvio.costodepesoextra / 1;
             }
             return costext;
         }
 
-        public float CalcularCostoDeEnvioRapido(Paquete paquete)
-        {
-            float costext = 0;
-            if (paquete.peso > 2)
-            {
-                costext = Math.Abs(2 - paquete.peso) * 50 / 1;
-            }
-            return  costext;
-        }
-
-        public float CalcularCostoDeEnvioEstandar(Paquete paquete)
-        {
-            float costext = 0;
-            if (paquete.peso > 2)
-            {
-                costext = Math.Abs(2 - paquete.peso) * 15 / 1;
-            }
-            return costext;
-        }
     }
 }

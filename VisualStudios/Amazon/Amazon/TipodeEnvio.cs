@@ -12,12 +12,15 @@ namespace Amazon
         public int id { get; set; }
         public int numTipodeEnvio { get; set; }
 
+        public float costodepesoextra { get; set; }
+
         public TipodeEnvio ()
         {
             this.codigo = codigo;
             this.costoDeEnvio = costoDeEnvio;
             this.duracionDeEnvio = duracionDeEnvio;
             this.numTipodeEnvio = numTipodeEnvio;
+            this.costodepesoextra = costodepesoextra;
         }
     }
 }

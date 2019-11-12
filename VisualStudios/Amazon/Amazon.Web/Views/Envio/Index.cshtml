@@ -1,4 +1,46 @@
-﻿@{ 
+﻿@{
     ViewData["Title"] = "Agregar envio";
 }
+@model IEnumerable<Amazon.Envio>
 
+
+
+<div class="row">
+    <div class="col-10">
+        <h1 class="display-4">Envios</h1>
+    </div>
+</div>
+<br />
+<a role="button" asp-controller="envio" asp-action="Agregar" class="btn btn-outline-primary">Agregar</a>
+<br />
+<br />
+<p>Cantidad envios: <b>@ViewBag.CantidadEmpleados</b></p>
+<table class="table table-bordered table-hover table-sm">
+    <thead>
+        <tr>
+            <th>Numero de envio</th>
+            <th>Nro cliente de envio</th>
+            <th>Nro cliente remitente</th>
+            <th>Fecha de llegada</th>
+            <th>Tipo de envio</th>
+            <th>Costo de envio</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var envio in Model)
+        {
+            <tr>
+                <td>@envio.numEnvio</td>
+                <td>@envio.destinatario.numCliente </td>
+                <td>@envio.remitente.numCliente </td>
+                <td>@envio.fechaLlegada </td>
+                <td>@envio.TipodeEnvio.codigo</td>
+                <th>@envio.costodelenvio</th>
+                <td>
+                    <a asp-controller="Empleado" asp-action="Eliminar" asp-route-id="@envio" class="btn btn-link">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

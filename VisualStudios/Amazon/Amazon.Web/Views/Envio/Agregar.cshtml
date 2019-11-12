@@ -11,6 +11,18 @@
             <input asp-for="numEnvio" type="number" placeholder="Numero de paquete" class="form-control" />
         </div>
     </div>
+    <div class="form-row">
+        <div class="form-group col-6">
+            <label for="Numero de Destinarario"> Numero de Destinatario</label>
+            <input asp-for="destinatario.numCliente" type="text" placeholder="Destinatario" class="form-control" />
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-6">
+            <label for="Numero de Remitente"> Numero de Remitente</label>
+            <input asp-for="remitente.numCliente" type="text" placeholder="Remitente" class="form-control" />
+        </div>
+    </div>
 
     <div class="form-row">
         <div class="form-group col-6">
@@ -46,7 +58,7 @@
         <tr>
             <th> Tabla de envios </th>
         </tr>
-        
+
         <tr>
             <th>Codigo</th>
             <th>Tipo de envio</th>

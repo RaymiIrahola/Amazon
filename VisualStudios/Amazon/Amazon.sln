@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.489
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Amazon", "Amazon\Amazon.csproj", "{235119CE-2D87-4324-BD5D-24EA10C19CA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amazon.Web", "Amazon.Web\Amazon.Web.csproj", "{9E71C373-2B93-4996-ACFE-6A7C72CA9862}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Amazon.Web", "Amazon.Web\Amazon.Web.csproj", "{9E71C373-2B93-4996-ACFE-6A7C72CA9862}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
