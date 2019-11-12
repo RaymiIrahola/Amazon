@@ -17,7 +17,11 @@ namespace Amazon.Web.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+            var usuarios = db.Context.GetCollection<Usuario>("mostrar");
+
+            ViewBag.cantidaddeusuarios = usuarios.Count();
+
+            return View("Index", usuarios.FindAll());
         }
 
         [HttpGet]

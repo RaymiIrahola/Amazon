@@ -22,6 +22,8 @@ namespace Amazon
 
         public UsuarioRemitente remitente { get; set; }
 
+        public TipodeEnvio TipodeEnvio { get; set; }
+
       
 
 
@@ -34,7 +36,7 @@ namespace Amazon
             this.direccionDeDestino = direccionDeDestino;
             this.numEnvio = numEnvio;
             this.paquetes = paquete;
-            usuarioDestinatario.recibir(this);
+            
         }
         public float CalcularCostoDeEnvioExpress(Paquete paquete)
         {
