@@ -11,7 +11,7 @@ namespace Amazon.Web.Controllers
     public class UsuarioController : Controller
     {
         private readonly LiteBDcontext db;
-        public UsuarioController (LiteBDcontext db)
+        public UsuarioController(LiteBDcontext db)
         {
             this.db = db;
         }

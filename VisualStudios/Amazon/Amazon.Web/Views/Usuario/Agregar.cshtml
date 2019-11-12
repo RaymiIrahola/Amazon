@@ -1,0 +1,49 @@
+﻿@model Amazon.Web.Models.Envio
+
+<h1>Agregar</h1>
+
+
+
+
+<form asp-controller="Envio" asp-action="Agregar" method="post">
+    <div class="form-row">
+        <div class="form-group col-6">
+            <label for="numEnvio"> Numero envio </label>
+            <input asp-for="numEnvio" type="number" placeholder="Numero de paquete" class="form-control" />
+        </div>
+    </div>
+
+    <div>
+        <div class="form-group col-6">
+            <label for="direccionDeDestino"> Direccion de destino </label>
+            <input asp-for="direccionDeDestino" type="text" placeholder="Destino" class="form-control" />
+        </div>
+    </div>
+
+    <div>
+        <div class="form-group col-6">
+            <label for="fechaEnvio">Fecha envio </label>
+            <input asp-for="fechaEnvio" type="date" placeholder="Envio" class="form-control" />
+        </div>
+    </div>
+
+    <div>
+        <div class="form-group col-6">
+            <label for="fechaLlegada">Fecha llegada </label>
+            <input asp-for="fechaLlegada" type="date" placeholder="Llegada" class="form-control" />
+        </div>
+    </div>
+
+    <div>
+        <label>Dirección</label>
+        <input />
+    </div>
+
+
+    <br />
+
+    <input type="submit" class="btn btn-outline-primary" value="Guardar" />
+    <a asp-controller="Agregar" asp-action="Index" role="button" class="btn btn-outline-secondary">Volver</a>
+
+</form>
+<br />
