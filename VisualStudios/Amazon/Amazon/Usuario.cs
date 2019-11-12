@@ -14,6 +14,16 @@ namespace Amazon
         public int numCliente { get; set; }
         public int numTarjeta { get; set; }
         public int telefono { get; set; }
+
+        public Usuario ()
+        {
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.direccion = direccion;
+            this.numCliente = numCliente;
+            this.numTarjeta = numTarjeta;
+            this.telefono = telefono;
+        }
         
 
 

@@ -11,5 +11,10 @@ namespace Amazon
         public int numPaquete { get; set; }
 
         public float peso { get; set; }
+        public Paquete ()
+        {
+            this.peso = peso;
+            this.numPaquete = numPaquete;
+        }
     }
 }

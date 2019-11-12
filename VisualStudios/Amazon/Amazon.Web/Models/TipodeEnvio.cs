@@ -12,5 +12,6 @@ namespace Amazon.Web.Models
         public int duracionDeEnvio { get; set; }
         public int id { get; set; }
         public int numTipodeEnvio { get; set; }
+
     }
 }
