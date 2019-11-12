@@ -29,7 +29,7 @@ namespace Amazon
 
 
        
-        public void Enviar (UsuarioDestinatario usuarioDestinatario, UsuarioRemitente usuarioRemitente, Paquete paquete)
+        public void Enviar (UsuarioDestinatario usuarioDestinatario, UsuarioRemitente usuarioRemitente, Paquete paquete, TipodeEnvio tipodeEnvio)
         {
             this.remitente = usuarioRemitente;
             this.destinatario = usuarioDestinatario;
@@ -38,7 +38,7 @@ namespace Amazon
             this.direccionDeDestino = direccionDeDestino;
             this.numEnvio = numEnvio;
             this.paquetes = paquete;
-            this.destinatario = usuarioDestinatario;
+            this.TipodeEnvio = TipodeEnvio;
             
         }
         public float CalcularCostoDeEnvioExpress(Paquete paquete)
