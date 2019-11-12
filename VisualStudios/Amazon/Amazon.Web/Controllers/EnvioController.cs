@@ -18,9 +18,12 @@ namespace Amazon.Web.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            return View("Index");
+            var eenvios = db.Context.GetCollection<Envio>("mostrar");
+           
+            ViewBag.CantidadEmpleados = eenvios.Count();
+           
+            return View("Index", eenvios.FindAll());
         }
-
 
         [HttpGet]
         public IActionResult Agregar()
@@ -50,6 +53,27 @@ namespace Amazon.Web.Controllers
 
             return RedirectToAction("Index", envios.FindAll());
         }
+
+        [HttpPost]
+        public IActionResult Calcularfecha(Envio envio)
+        {
+            var envios = db.Context.GetCollection<Envio>("amazon");
+
+            return 
+        }
+        +
+        [HttpPost]
+        public IActionResult calcularCosto (Envio envio)
+        {
+            var envios = db.Context.GetCollection<Envio>("amazon");
+
+
+            envios.Insert(envio);
+
+
+            return ();
+        }
+
 
 
 

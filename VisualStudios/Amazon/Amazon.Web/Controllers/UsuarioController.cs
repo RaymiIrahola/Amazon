@@ -19,5 +19,34 @@ namespace Amazon.Web.Controllers
         {
             return View();
         }
+
+        [HttpGet]
+        public IActionResult Agregar()
+        {
+
+            return View("Agregar");
+        }
+
+        [HttpPost]
+        public IActionResult Agregar(Usuario usuario)
+        {
+            var usuarios = db.Context.GetCollection<Usuario>("amazon");
+
+
+            usuarios.Insert(usuario);
+
+
+            return RedirectToAction("Index", usuarios.FindAll());
+        }
+
+        public IActionResult Eliminar(int id)
+        {
+            var usuarios = db.Context.GetCollection<Usuario>("nomina");
+
+
+            usuarios.Delete(x => x.id == id);
+
+            return RedirectToAction("Index", usuarios.FindAll());
+        }
     }
 }
