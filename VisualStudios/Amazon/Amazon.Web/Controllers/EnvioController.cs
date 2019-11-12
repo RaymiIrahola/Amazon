@@ -18,7 +18,7 @@ namespace Amazon.Web.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            var eenvios = db.Context.GetCollection<Envio>("mostrar");
+            var eenvios = db.Context.GetCollection<Envio>("Amazon");
            
             ViewBag.CantidadEmpleados = eenvios.Count();
            
@@ -47,7 +47,7 @@ namespace Amazon.Web.Controllers
 
         public IActionResult Eliminar(int id)
         {
-            var envios = db.Context.GetCollection<Envio>("nomina");
+            var envios = db.Context.GetCollection<Envio>("Amazon");
 
            
             envios.Delete(x => x.id == id);

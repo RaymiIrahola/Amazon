@@ -17,7 +17,7 @@ namespace Amazon.Web.Controllers
         }
         public IActionResult Index()
         {
-            var usuarios = db.Context.GetCollection<Usuario>("mostrar");
+            var usuarios = db.Context.GetCollection<Usuario>("Amazon");
 
             ViewBag.cantidaddeusuarios = usuarios.Count();
 
@@ -45,7 +45,7 @@ namespace Amazon.Web.Controllers
 
         public IActionResult Eliminar(int id)
         {
-            var usuarios = db.Context.GetCollection<Usuario>("nomina");
+            var usuarios = db.Context.GetCollection<Usuario>("Amazon");
 
 
             usuarios.Delete(x => x.id == id);

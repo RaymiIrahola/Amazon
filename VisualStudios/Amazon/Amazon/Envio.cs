@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace Amazon
 {
@@ -33,9 +34,11 @@ namespace Amazon
             this.remitente = usuarioRemitente;
             this.destinatario = usuarioDestinatario;
             this.fechaEnvio = DateTime.Now;
+            this.fechaLlegada = fechaEnvio.AddDays(TipodeEnvio.duracionDeEnvio);
             this.direccionDeDestino = direccionDeDestino;
             this.numEnvio = numEnvio;
             this.paquetes = paquete;
+            this.destinatario = usuarioDestinatario;
             
         }
         public float CalcularCostoDeEnvioExpress(Paquete paquete)

@@ -8,11 +8,6 @@ namespace Amazon
 {
     public class UsuarioDestinatario : Usuario
     {
-        public List<Envio> ListadePaquetes { get; set; }
-
-        public void recibir (Envio envio)
-        {
-            ListadePaquetes.Add(envio);
-        }
+        
     }
 }

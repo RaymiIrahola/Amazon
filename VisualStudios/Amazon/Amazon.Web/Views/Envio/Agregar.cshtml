@@ -2,9 +2,9 @@
 
 @model Amazon.Web.Models.Envio
 
-<h1>Agregar</h1>    
+<h1>Nuevo Envio</h1>    
 
-<form asp-controller="Envio" asp-action="Agregar" method="post">
+<form asp-controller="Envio" asp-action="Envio" method="post">
     <div class="form-row">
         <div class="form-group col-6">
             <label for="numEnvio"> Numero envio </label>
@@ -12,49 +12,92 @@
         </div>
     </div>
 
-    <div>
+    <div class="form-row">
         <div class="form-group col-6">
-            <label for="direccionDeDestino"> Direccion de destino </label>
-            <input asp-for="direccionDeDestino" type="text" placeholder="Destino" class="form-control" />
+            <label for="Destinatario"> Direccion de envio</label>
+            <input asp-for="destinatario" type="text" placeholder="Remitente" class="form-control" />
         </div>
     </div>
 
-    <div>
+    <div class="form-row">
+        <div class="form-group col-6">
+            <label for="direccionDeDestino"> Direccion de destino </label>
+            <input asp-for="direccionDeDestino" type="text" placeholder="Destinatario" class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-row">
         <div class="form-group col-6">
             <label for="fechaEnvio">Fecha envio </label>
             <input asp-for="fechaEnvio" type="date" placeholder="Envio" class="form-control" />
         </div>
     </div>
 
-    <div>
-        <div class="form-group col-6">
-            <label for="Tipodeenvio">Agregar condigo de tipo envio </label>
-            <input asp-for="tipodeEnvio.codigo" type="text" placeholder="Codigo" class="form-control" />
-        </div>
-    </div>
     <div class="form-row">
         <div class="form-group col-6">
             <label for="NumPaquetes"> Numero de paquete </label>
             <input asp-for="paquetes.numPaquete" type="number" placeholder="numero" class="form-control" />
         </div>
     </div>
+    <br />
+
+
+    <table style="width:40% ">
+        <tr>
+            <th> Tabla de envios </th>
+        </tr>
+        
+        <tr>
+            <th>Codigo</th>
+            <th>Tipo de envio</th>
+            <th>Costo de envio</th>
+        </tr>
+        <tr>
+            <td>R</td>
+            <td>Rapida (1 dia)</td>
+            <td>$200 + $50/Kg</td>
+        </tr>
+        <tr>
+            <td>X</td>
+            <td>Express (2 dias)</td>
+            <td>$100 + $20/Kg</td>
+        </tr>
+        <tr>
+            <td>E</td>
+            <td>Estandar (4 dias)</td>
+            <td>$50 + $16/Kg</td>
+        </tr>
+    </table>
+    <br />
+
+
+
+    <div class="form-row">
+        <div class="form-group col-6">
+            <label for="Tipodeenvio">Agregar condigo de tipo envio </label>
+            <input asp-for="tipodeEnvio.codigo" type="text" placeholder="Codigo" class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-6">
+            <label for="NumPaquetes"> Numero de paquete </label>
+            <input asp-for="paquetes.numPaquete" type="number" placeholder="numero" class="form-control" />
+        </div>
+    </div>
+
     <div class="form-row">
         <div class="form-group col-6">
             <label for="Peso"> Peso del paquete</label>
             <input asp-for="paquetes.peso" type="number" placeholder="peso" class="form-control" />
         </div>
     </div>
-    <div class="form-row">
-        <div class="form-group col-6">
-            <label for="Destinatario"> Introdusca tu direccion de envio</label>
-            <input asp-for="destinatario" type="text" placeholder="destinatario" class="form-control" />
-        </div>
-    </div>
+
 
     <br />
 
     <input type="submit" class="btn btn-outline-primary" value="Guardar" />
-    <a asp-controller="Agregar" asp-action="Index" role="button" class="btn btn-outline-secondary">Volver</a>
+    <a asp-controller="Envio" asp-action="Index" role="button" class="btn btn-outline-secondary">Volver</a>
 
 </form>
 <br />

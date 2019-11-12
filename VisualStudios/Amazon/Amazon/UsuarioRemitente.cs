@@ -12,13 +12,6 @@ namespace Amazon
 {
     public class UsuarioRemitente : Usuario
     {
-        public List<Envio> ListadeEnvios { get; set; }
-
-        public void Realizarenvio(Envio envio, UsuarioDestinatario usuarioDestinatario , Paquete paquete)
-        {
-            ListadeEnvios.Add(envio);
-            envio.Enviar(usuarioDestinatario, this, paquete);
-        }
 
     }
 }
