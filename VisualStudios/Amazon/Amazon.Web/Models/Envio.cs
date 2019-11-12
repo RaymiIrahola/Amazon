@@ -21,6 +21,6 @@ namespace Amazon.Web.Models
 
         public UsuarioRemitente remitente { get; set; }
 
-        public TipodeEnvio tipoEnvio { get; set; }
+        
     }
 }
