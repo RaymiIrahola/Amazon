@@ -7,16 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Views\NewFolder\**" />
     <Compile Remove="Views\Paquete\**" />
     <Compile Remove="Views\TipodeEnvio\**" />
-    <Content Remove="Views\NewFolder\**" />
     <Content Remove="Views\Paquete\**" />
     <Content Remove="Views\TipodeEnvio\**" />
-    <EmbeddedResource Remove="Views\NewFolder\**" />
     <EmbeddedResource Remove="Views\Paquete\**" />
     <EmbeddedResource Remove="Views\TipodeEnvio\**" />
-    <None Remove="Views\NewFolder\**" />
     <None Remove="Views\Paquete\**" />
     <None Remove="Views\TipodeEnvio\**" />
   </ItemGroup>

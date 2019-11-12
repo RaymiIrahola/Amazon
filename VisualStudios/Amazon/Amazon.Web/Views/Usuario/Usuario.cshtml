@@ -1,0 +1,53 @@
+﻿@model Amazon.Web.Models.Usuario
+
+@{
+    ViewData["Title"] = "Usuario";
+}
+
+<h1>Usuario</h1>
+
+<form asp-controller="Usuario" asp-action="Usuario" method="post">
+    <div class="form-row">
+        <div class="form-group col-6">
+            <label for="nombre">Nombre</label>
+            <input asp-for="nombre" type="text" placeholder="Nombre" class="form-control"/>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-6">
+            <label for="apellido">Apellido</label>
+            <input asp-for="apellido" type="text" placeholder="Apellido" class="form-control"/>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-6">
+            <label for="direccion">Direccion</label>
+            <input asp-for="direccion" type="text" placeholder="Direccion" class="form-control"/>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-6">
+            <label for="numTarjeta">Numero de tarjeta</label>
+            <input asp-for="numTarjeta" type="number" placeholder="Numero de tarjeta" class="form-control"/>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-6">
+            <label for="numCliente">Numero de cliente</label>
+            <input asp-for="numCliente" placeholder="Numero cliente" class="form-control"/>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-6">
+            <label for="telefono"> Telefono </label>
+            <input asp-for="telefono" placeholder="Telefono" class="form-control"/>
+
+        </div>
+    </div>
+</form>
+
