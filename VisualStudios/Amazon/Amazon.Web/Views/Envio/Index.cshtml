@@ -9,7 +9,7 @@
 <a role="button" asp-controller="envio" asp-action="Agregar" class="btn btn-outline-primary">Agregar</a>
 <br />
 <br />
-<p>Cantidad envios: <b>@ViewBag.CantidadEmpleados</b></p>
+<p>Cantidad envios: <b>@ViewBag.CantidadUsuarios</b></p>
 <table class="table table-bordered table-hover table-sm">
     <thead>
         <tr>
@@ -27,10 +27,10 @@
         {
             <tr>
                 <td>@envio.numEnvio</td>
-                <td>@envio.destinatario.numCliente </td>
-                <td>@envio.remitente.numCliente </td>
-                <td>@envio.fechaLlegada </td>
-                <td>@envio.TipodeEnvio.codigo</td>
+                <td>@envio.destinatario</td>
+                <td>@envio.remitente </td>
+                <td>@envio.fechaLlegada</td>
+                <td>@envio.TipodeEnvio</td>
                 <th>@envio.costodelenvio</th>
                 <td>
                     <a asp-controller="Empleado" asp-action="Eliminar" asp-route-id="@envio" class="btn btn-link">Eliminar</a>

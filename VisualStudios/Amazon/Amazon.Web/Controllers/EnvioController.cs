@@ -20,7 +20,7 @@ namespace Amazon.Web.Controllers
         {
             var eenvios = db.Context.GetCollection<Envio>("amazon");
            
-            ViewBag.CantidadEmpleados = eenvios.Count();
+            ViewBag.CantidadUsuarios = eenvios.Count();
            
             return View("Index", eenvios.FindAll());
         }
@@ -35,13 +35,12 @@ namespace Amazon.Web.Controllers
         [HttpPost]
         public IActionResult Agregar(Envio envio)
         {
-            var envios = db.Context.GetCollection<Envio>("amazon");
-            var usuarios = db.Context.GetCollection<Usuario>("usuarios");
-            var usuario = db.Context.GetCollection<Usuario>();
             
-            envio.remitente.direccion = 
+            var envios = db.Context.GetCollection<Envio>("amazon");
             envio.fechaLlegada = envio.fechaEnvio.AddDays(envio.TipodeEnvio.duracionDeEnvio);
-            envio.TipodeEnvio.codigo = envio.TipodeEnvio.codigo;                     
+
+            envio.costodelenvio = envio.CalcularCostoDeEnvio(envio.costodelenvio);
+            
             envios.Insert(envio);
 
           
@@ -50,7 +49,7 @@ namespace Amazon.Web.Controllers
 
         public IActionResult Eliminar(int id)
         {
-            var envios = db.Context.GetCollection<Envio>("Amazon");
+            var envios = db.Context.GetCollection<Envio>("amazon");
 
            
             envios.Delete(x => x.id == id);
