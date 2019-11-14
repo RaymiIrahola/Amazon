@@ -23,7 +23,7 @@ namespace Amazon
 
         public Usuario remitente { get; set; }
 
-        public TipodeEnvio TipodeEnvio { get; set; }
+        public List<TipodeEnvio> TiposdeEnvios { get; set; }
 
         public double costodelenvio { get; set; }
 
@@ -31,16 +31,16 @@ namespace Amazon
 
 
        
-        public void Enviar (Usuario usuarioDestinatario, Usuario usuarioRemitente, Paquete paquete, TipodeEnvio tipodeEnvio)
+        public void Enviar ()
         {
-            this.remitente = usuarioRemitente;
-            this.destinatario = usuarioDestinatario;
+            this.remitente = new Usuario();
+            this.destinatario = new Usuario();
             this.fechaEnvio = DateTime.Now;
-            this.fechaLlegada = fechaEnvio.AddDays(TipodeEnvio.duracionDeEnvio);
-            this.direccionDeDestino = direccionDeDestino;
-            this.numEnvio = numEnvio;
-            this.paquetes = paquete;
-            this.TipodeEnvio = TipodeEnvio;
+            this.fechaLlegada = DateTime.Now;
+            this.direccionDeDestino = String.Empty;
+            this.numEnvio = 0;
+            this.paquetes = new Paquete();
+            this.TiposdeEnvios = new List<TipodeEnvio>() { new TipodeEnvio {codigo ="R" }, new TipodeEnvio{ };
             this.costodelenvio = costodelenvio;
             
         }
