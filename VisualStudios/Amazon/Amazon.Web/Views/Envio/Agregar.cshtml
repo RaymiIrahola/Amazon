@@ -18,6 +18,7 @@
         </div>
     </div>
     <div class="form-row">
+
         <div class="form-group col-6">
             <label for="Numero de Remitente"> Numero de Remitente</label>
             <input asp-for="remitente.numCliente" type="text" placeholder="Remitente" class="form-control" />
@@ -27,14 +28,14 @@
     <div class="form-row">
         <div class="form-group col-6">
             <label for="Destinatario"> Direccion de envio</label>
-            <input asp-for="destinatario" type="text" placeholder="Remitente" class="form-control" />
+            <input asp-for="remitente.direccion" type="text" placeholder="Remitente" class="form-control" />
         </div>
     </div>
 
     <div class="form-row">
         <div class="form-group col-6">
             <label for="direccionDeDestino"> Direccion de destino </label>
-            <input asp-for="direccionDeDestino" type="text" placeholder="Destinatario" class="form-control" />
+            <input asp-for="destinatario.direccion" type="text" placeholder="Destinatario" class="form-control" />
         </div>
     </div>
 

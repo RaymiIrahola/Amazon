@@ -7,7 +7,7 @@ namespace Amazon
 {
     public class Envio
     {
-        public UsuarioDestinatario destinatario { get; set; }
+        public Usuario destinatario { get; set; }
 
         public string direccionDeDestino { get; set; }
 
@@ -21,7 +21,7 @@ namespace Amazon
 
         public Paquete paquetes { get; set; }
 
-        public UsuarioRemitente remitente { get; set; }
+        public Usuario remitente { get; set; }
 
         public TipodeEnvio TipodeEnvio { get; set; }
 
@@ -31,7 +31,7 @@ namespace Amazon
 
 
        
-        public void Enviar (UsuarioDestinatario usuarioDestinatario, UsuarioRemitente usuarioRemitente, Paquete paquete, TipodeEnvio tipodeEnvio)
+        public void Enviar (Usuario usuarioDestinatario, Usuario usuarioRemitente, Paquete paquete, TipodeEnvio tipodeEnvio)
         {
             this.remitente = usuarioRemitente;
             this.destinatario = usuarioDestinatario;

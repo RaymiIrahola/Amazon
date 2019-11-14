@@ -18,7 +18,7 @@ namespace Amazon.Web.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            var eenvios = db.Context.GetCollection<Envio>("Amazon");
+            var eenvios = db.Context.GetCollection<Envio>("amazon");
            
             ViewBag.CantidadEmpleados = eenvios.Count();
            
@@ -36,7 +36,10 @@ namespace Amazon.Web.Controllers
         public IActionResult Agregar(Envio envio)
         {
             var envios = db.Context.GetCollection<Envio>("amazon");
-
+            var usuarios = db.Context.GetCollection<Usuario>("usuarios");
+            var usuario = db.Context.GetCollection<Usuario>();
+            
+            envio.remitente.direccion = 
             envio.fechaLlegada = envio.fechaEnvio.AddDays(envio.TipodeEnvio.duracionDeEnvio);
             envio.TipodeEnvio.codigo = envio.TipodeEnvio.codigo;                     
             envios.Insert(envio);
