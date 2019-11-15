@@ -37,9 +37,9 @@ namespace Amazon.Web.Controllers
         {
             
             var envios = db.Context.GetCollection<Envio>("amazon");
-            envio.fechaLlegada = envio.fechaEnvio.AddDays(envio.TipodeEnvio.duracionDeEnvio);
+            envio.fechaLlegada = envio.llegada(envio.TipodeEnvio);
 
-            envio.costodelenvio = envio.CalcularCostoDeEnvio(envio.costodelenvio);
+            envio.costodelenvio = envio.CalcularCostoDeEnvio(envio.paquetes , envio.TipodeEnvio);
             
             envios.Insert(envio);
 

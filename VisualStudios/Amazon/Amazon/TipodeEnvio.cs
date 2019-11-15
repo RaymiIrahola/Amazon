@@ -14,6 +14,35 @@ namespace Amazon
 
         public float costodepesoextra { get; set; }
 
+        public void verificarcodigot (string codigox)
+        {
+            if (codigox == "R")
+            {
+                costoDeEnvio = 1;
+                duracionDeEnvio = 3;
+                costodepesoextra = 14;
+            }
+            else
+            {
+                if (codigox == "E" )
+                {
+                    costoDeEnvio = 1;
+                    duracionDeEnvio = 3;
+                    costodepesoextra = 14;
+                }
+                else
+                {
+                    if (codigox == "E")
+                    {
+                        costoDeEnvio = 1;
+                        duracionDeEnvio = 3;
+                        costodepesoextra = 14;
+                    }
+                }
+            }
+        }
+
+
         public TipodeEnvio ()
         {
             this.codigo = codigo;

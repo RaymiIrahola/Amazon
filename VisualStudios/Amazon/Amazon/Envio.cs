@@ -23,7 +23,7 @@ namespace Amazon
 
         public Usuario remitente { get; set; }
 
-        public List<TipodeEnvio> TiposdeEnvios { get; set; }
+        public TipodeEnvio TipodeEnvio { get; set; }
 
         public double costodelenvio { get; set; }
 
@@ -36,12 +36,11 @@ namespace Amazon
             this.remitente = new Usuario();
             this.destinatario = new Usuario();
             this.fechaEnvio = DateTime.Now;
-            this.fechaLlegada = DateTime.Now;
+            this.fechaLlegada = fechaLlegada;
             this.direccionDeDestino = String.Empty;
             this.numEnvio = 0;
             this.paquetes = new Paquete();
-            this.TiposdeEnvios = new List<TipodeEnvio>() { new TipodeEnvio {codigo ="R" }, new TipodeEnvio{ };
-            this.costodelenvio = costodelenvio;
+            this.TipodeEnvio = new TipodeEnvio();
             
         }
         public double CalcularCostoDeEnvio(Paquete paquete , TipodeEnvio tipodeEnvio)
@@ -52,6 +51,13 @@ namespace Amazon
                 costext = Math.Abs(2 - paquete.peso) * tipodeEnvio.costodepesoextra / 1;
             }
             return costext;
+        }
+
+        public DateTime llegada ( TipodeEnvio tipodeEnvio)
+        {
+            DateTime l;
+            l=  fechaLlegada.AddDays(tipodeEnvio.duracionDeEnvio);
+            return l;
         }
 
     }
