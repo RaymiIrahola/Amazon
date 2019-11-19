@@ -7,11 +7,10 @@
 <form asp-controller="Envio" asp-action="Envio" method="post">
     <div class="form-row">
         <div class="form-group col-6">
-            <label for="numEnvio"> Numero envio </label>
-            <input asp-for="numEnvio" type="number" placeholder="Numero de paquete" class="form-control" />
+            <label for="numEnvio"> Número envío </label>
+            <input asp-for="numEnvio" type="number" placeholder="Número de paquete" class="form-control" />
         </div>
-    </div>
-    <div class="form-row">
+   
         <div class="form-group col-6">
             <label for="Numero de Destinarario"> Numero de Destinatario</label>
             <input asp-for="destinatario.numCliente" type="number" placeholder="Destinatario" class="form-control" />
@@ -23,33 +22,29 @@
             <label for="Numero de Remitente"> Numero de Remitente</label>
             <input asp-for="remitente.numCliente" type="number" placeholder="Remitente" class="form-control" />
         </div>
-    </div>
-
-    <div class="form-row">
+    
         <div class="form-group col-6">
-            <label for="Destinatario"> Direccion de envio</label>
-            <input asp-for="remitente.direccion" type="text" placeholder="Ingresar direccion" class="form-control" />
+            <label for="Destinatario"> Dirección de envío</label>
+            <input asp-for="remitente.direccion" type="text" placeholder="Ingresar dirección" class="form-control" />
         </div>
     </div>
 
     <div class="form-row">
         <div class="form-group col-6">
-            <label for="direccionDeDestino"> Direccion de destino </label>
+            <label for="direccionDeDestino"> Dirección de destino </label>
             <input asp-for="destinatario.direccion" type="text" placeholder="Destino" class="form-control" />
         </div>
-    </div>
-
-    <div class="form-row">
+    
         <div class="form-group col-6">
-            <label for="fechaEnvio">Fecha envio </label>
-            <input asp-for="fechaEnvio" type="date" placeholder="Envio" class="form-control" />
+            <label for="fechaEnvio">Fecha envío </label>
+            <input asp-for="fechaEnvio" type="date" placeholder="Envío" class="form-control"  />
         </div>
     </div>
 
     <div class="form-row">
         <div class="form-group col-6">
-            <label for="NumPaquetes"> Numero de paquete </label>
-            <input asp-for="paquetes.numPaquete" type="number" placeholder="numero" class="form-control" />
+            <label for="NumPaquetes"> Número de paquete </label>
+            <input asp-for="paquetes.numPaquete" type="number" placeholder="Número" class="form-control" />
         </div>
     </div>
     <br />
@@ -57,27 +52,27 @@
 
     <table style="width:40% ">
         <tr>
-            <th> Tabla de envios </th>
+            <th> Tabla de envíos </th>
         </tr>
 
         <tr>
-            <th>Codigo</th>
-            <th>Tipo de envio</th>
-            <th>Costo de envio</th>
+            <th>Código</th>
+            <th>Tipo de envío</th>
+            <th>Costo de envío</th>
         </tr>
         <tr>
             <td>R</td>
-            <td>Rapida (1 dia)</td>
+            <td>Rápida (1 día)</td>
             <td>$200 + $50/Kg</td>
         </tr>
         <tr>
             <td>X</td>
-            <td>Express (2 dias)</td>
+            <td>Express (2 días)</td>
             <td>$100 + $20/Kg</td>
         </tr>
         <tr>
             <td>E</td>
-            <td>Estandar (4 dias)</td>
+            <td>Estandar (4 días)</td>
             <td>$50 + $16/Kg</td>
         </tr>
     </table>
@@ -87,22 +82,18 @@
 
     <div class="form-row">
         <div class="form-group col-6">
-            <label for="Tipodeenvio">Agregar codigo de tipo envio </label>
-            <input asp-for="tipodeEnvio.codigo" type="text" placeholder="Codigo" class="form-control" />
+            <label for="Tipodeenvio">Agregar código de tipo envío </label>
+            <input asp-for="tipodeEnvio.codigo" type="text" placeholder="Código" class="form-control" />
         </div>
-    </div>
-
-    <div class="form-row">
-        <div class="form-group col-6">
-            <label for="NumPaquetes"> Numero de paquete </label>
-            <input asp-for="paquetes.numPaquete" type="number" placeholder="numero" class="form-control" />
-        </div>
-    </div>
-
-    <div class="form-row">
+    
+        @*<div class="form-group col-6">
+            <label for="NumPaquetes"> Número de paquete </label>
+            <input asp-for="paquetes.numPaquete" type="number" placeholder="Número" class="form-control" />
+        </div>*@
+    
         <div class="form-group col-6">
             <label for="Peso"> Peso del paquete</label>
-            <input asp-for="paquetes.peso" type="number" placeholder="peso" class="form-control" />
+            <input asp-for="paquetes.peso" type="number" placeholder="Peso" class="form-control" />
         </div>
     </div>
 
