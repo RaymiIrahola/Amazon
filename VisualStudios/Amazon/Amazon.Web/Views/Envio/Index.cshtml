@@ -27,11 +27,11 @@
         {
             <tr>
                 <td>@envio.numEnvio</td>
-                <td>@envio.destinatario.nombre</td>
-                <td>@envio.remitente.nombre </td>
+                <td>@envio.destinatario.numCliente</td>
+                <td>@envio.remitente.numCliente </td>
                 <td>@envio.fechaLlegada</td>
                 <td>@envio.TipodeEnvio.codigo</td>
-                <th>@envio.costodelenvio</th>
+                <th>$ @envio.costodelenvio</th>
                 <td>
                     <a asp-controller="Empleado" asp-action="Eliminar" asp-route-id="@envio" class="btn btn-link">Eliminar</a>
                 </td>

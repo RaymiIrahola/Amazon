@@ -48,7 +48,7 @@ namespace Amazon
             double costext = 0;
             if (paquete.peso > 2)
             {
-                costext = Math.Abs(2 - paquete.peso) * tipodeEnvio.costodepesoextra / 1;
+                costext = tipodeEnvio.costoDeEnvio +  Math.Abs(2 - paquete.peso) * tipodeEnvio.costodepesoextra / 1;
             }
             return costext;
         }
@@ -56,7 +56,7 @@ namespace Amazon
         public DateTime llegada ( TipodeEnvio tipodeEnvio)
         {
             DateTime l;
-            l=  fechaLlegada.AddDays(tipodeEnvio.duracionDeEnvio);
+            l=  fechaEnvio.AddDays(tipodeEnvio.duracionDeEnvio);
             return l;
         }
 

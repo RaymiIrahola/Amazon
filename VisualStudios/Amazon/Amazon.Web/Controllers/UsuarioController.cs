@@ -17,7 +17,7 @@ namespace Amazon.Web.Controllers
         }
         public IActionResult Index()
         {
-            var usuarios = db.Context.GetCollection<Usuario>("Amazon");
+            var usuarios = db.Context.GetCollection<Usuario>("usuarios");
 
             ViewBag.cantidaddeusuarios = usuarios.Count();
 
@@ -34,7 +34,7 @@ namespace Amazon.Web.Controllers
         [HttpPost]
         public IActionResult Agregar(Usuario usuario)
         {
-            var usuarios = db.Context.GetCollection<Usuario>("amazon");
+            var usuarios = db.Context.GetCollection<Usuario>("usuarios");
 
 
             usuarios.Insert(usuario);
@@ -45,7 +45,7 @@ namespace Amazon.Web.Controllers
 
         public IActionResult Eliminar(int id)
         {
-            var usuarios = db.Context.GetCollection<Usuario>("Amazon");
+            var usuarios = db.Context.GetCollection<Usuario>("usuarios");
 
 
             usuarios.Delete(x => x.id == id);

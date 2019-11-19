@@ -18,25 +18,25 @@ namespace Amazon
         {
             if (codigox == "R")
             {
-                costoDeEnvio = 1;
-                duracionDeEnvio = 3;
-                costodepesoextra = 14;
+                costoDeEnvio = 200;
+                duracionDeEnvio = 1;
+                costodepesoextra = 50;
             }
             else
             {
-                if (codigox == "E" )
+                if (codigox == "X" )
                 {
-                    costoDeEnvio = 1;
-                    duracionDeEnvio = 3;
-                    costodepesoextra = 14;
+                    costoDeEnvio = 100;
+                    duracionDeEnvio = 2;
+                    costodepesoextra = 20;
                 }
                 else
                 {
                     if (codigox == "E")
                     {
-                        costoDeEnvio = 1;
-                        duracionDeEnvio = 3;
-                        costodepesoextra = 14;
+                        costoDeEnvio = 50;
+                        duracionDeEnvio = 4;
+                        costodepesoextra = 15;
                     }
                 }
             }

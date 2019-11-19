@@ -34,14 +34,45 @@ namespace Amazon.Web.Controllers
 
         [HttpPost]
         public IActionResult Agregar(Envio envio)
-        {
-            
+        {            
             var envios = db.Context.GetCollection<Envio>("amazon");
-            envio.fechaLlegada = envio.llegada(envio.TipodeEnvio);
 
-            envio.costodelenvio = envio.CalcularCostoDeEnvio(envio.paquetes , envio.TipodeEnvio);
-            
-            envios.Insert(envio);
+            var usuarios = db.Context.GetCollection<Usuario>("usuarios");
+
+
+            Envio nuevoenvio = new Envio();
+            var tipoenvio = new TipodeEnvio ();
+            var paquetel = new Paquete();
+
+            paquetel.peso = envio.paquetes.peso;
+            paquetel.numPaquete = envio.paquetes.numPaquete;
+            tipoenvio.codigo = envio.TipodeEnvio.codigo;
+
+
+            tipoenvio.verificarcodigot(envio.TipodeEnvio.codigo);
+
+            nuevoenvio.fechaEnvio = DateTime.Now;            
+
+            nuevoenvio.destinatario = usuarios.FindAll().FirstOrDefault(x => x.numCliente == envio.destinatario.numCliente);
+
+            nuevoenvio.remitente = usuarios.FindAll().FirstOrDefault(x => x.numCliente == envio.remitente.numCliente);
+
+            nuevoenvio.direccionDeDestino = nuevoenvio.direccionDeDestino;
+
+            nuevoenvio.numEnvio = envio.numEnvio;
+
+            nuevoenvio.paquetes = paquetel;
+
+            nuevoenvio.TipodeEnvio = tipoenvio;
+
+            nuevoenvio.costodelenvio = nuevoenvio.CalcularCostoDeEnvio(paquetel, tipoenvio);
+
+            nuevoenvio.fechaLlegada = nuevoenvio.llegada(tipoenvio);
+
+
+           
+
+            envios.Insert(nuevoenvio);
 
           
             return RedirectToAction("Index", envios.FindAll());
