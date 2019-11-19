@@ -39,7 +39,8 @@ namespace Amazon.Web.Controllers
 
             var usuarios = db.Context.GetCollection<Usuario>("usuarios");
 
-
+            //var Envio = envios.FindAll().FirstOrDefault();
+            //Envio.
             Envio nuevoenvio = new Envio();
             var tipoenvio = new TipodeEnvio ();
             var paquetel = new Paquete();

@@ -2,7 +2,7 @@
 
 @model Amazon.Web.Models.Envio
 
-<h1>Nuevo Envio</h1>    
+<h1>Nuevo Envio</h1>
 
 <form asp-controller="Envio" asp-action="Envio" method="post">
     <div class="form-row">
@@ -10,7 +10,7 @@
             <label for="numEnvio"> Número envío </label>
             <input asp-for="numEnvio" type="number" placeholder="Número de paquete" class="form-control" />
         </div>
-   
+
         <div class="form-group col-6">
             <label for="Numero de Destinarario"> Numero de Destinatario</label>
             <input asp-for="destinatario.numCliente" type="number" placeholder="Destinatario" class="form-control" />
@@ -22,7 +22,7 @@
             <label for="Numero de Remitente"> Numero de Remitente</label>
             <input asp-for="remitente.numCliente" type="number" placeholder="Remitente" class="form-control" />
         </div>
-    
+
         <div class="form-group col-6">
             <label for="Destinatario"> Dirección de envío</label>
             <input asp-for="remitente.direccion" type="text" placeholder="Ingresar dirección" class="form-control" />
@@ -34,11 +34,6 @@
             <label for="direccionDeDestino"> Dirección de destino </label>
             <input asp-for="destinatario.direccion" type="text" placeholder="Destino" class="form-control" />
         </div>
-   
-        <div class="form-group col-6">
-            <label for="fechaEnvio">Fecha envío </label>
-            <input asp-for="fechaEnvio" type="date" placeholder="Envío" class="form-control"  />
-        </div>
     </div>
 
     <div class="form-row">
@@ -49,7 +44,7 @@
     </div>
     <br />
 
-    <table style="width:40% ">
+    <table style="width:40%">
         <tr>
             <th> Tabla de envíos </th>
         </tr>
@@ -77,24 +72,20 @@
     </table>
     <br />
 
-
-
     <div class="form-row">
         <div class="form-group col-6">
             <label for="Tipodeenvio">Agregar código de tipo envío </label>
             <input asp-for="tipodeEnvio.codigo" type="text" placeholder="Código" class="form-control" />
         </div>
-    
-        @*<div class="form-group col-6">
-            <label for="NumPaquetes"> Número de paquete </label>
-            <input asp-for="paquetes.numPaquete" type="number" placeholder="Número" class="form-control" />
-        </div>*@
-    
+    </div>
+    <div class="form-row">
         <div class="form-group col-6">
             <label for="Peso"> Peso del paquete</label>
             <input asp-for="paquetes.peso" type="number" placeholder="Peso" class="form-control" />
         </div>
     </div>
+
+
 
 
     <br />
@@ -105,34 +96,7 @@
 </form>
 <br />
 
-    
-    <!--<table>
-        <tr>
-            <td>Numero de paquete</td>
 
-            <input />
 
-            <br />
-
-            <td>Peso</td>
-            <input />
-
-            <br />
-
-            <td>Remitente</td>
-            <input />
-
-            <br />
-
-            <td>Destinatario</td>
-            <input />
-
-            <br />
-
-            <td>Dirección</td>
-            <input />
-
-        </tr>
-    </table> -->
 
 

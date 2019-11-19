@@ -19,6 +19,8 @@
             <th>Fecha de llegada</th>
             <th>Tipo de envio</th>
             <th>Costo de envio</th>
+            <th>Peso del paquete</th>
+            <th>Direccion secundaria</th>
 
         </tr>
     </thead>
@@ -32,9 +34,8 @@
                 <td>@envio.fechaLlegada</td>
                 <td>@envio.TipodeEnvio.codigo</td>
                 <th>$ @envio.costodelenvio</th>
-                <td>
-                    <a asp-controller="Empleado" asp-action="Eliminar" asp-route-id="@envio" class="btn btn-link">Eliminar</a>
-                </td>
+                <th>@envio.paquetes.peso </th>
+                <th>@envio.destinatario.direccion</th>
             </tr>
         }
     </tbody>
